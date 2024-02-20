@@ -31,7 +31,7 @@ namespace CppCLRWinFormsProject {
 	private: System::Windows::Forms::NumericUpDown^ numericUpDownLadoCorto;
 	private: System::Windows::Forms::NumericUpDown^ numericUpDownLadoLargo;
 	private: System::Windows::Forms::Button^ buttonRectangulo;
-	private: System::Collections::Generic::List<Figura^>^ listaFiguras;
+	private: List<Figura^>^ listaFiguras;
 
 	public:
 		Form1(void)
@@ -71,7 +71,7 @@ namespace CppCLRWinFormsProject {
 		void InitializeComponent(void)
 		{
 			
-			this->listaFiguras = (gcnew System::Collections::Generic::List<Figura^>(1000));
+
 			this->textBoxRadio = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->labelSalida = (gcnew System::Windows::Forms::Label());
@@ -252,6 +252,7 @@ namespace CppCLRWinFormsProject {
 		Calcula();
 	}
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->listaFiguras = (gcnew List<Figura^>(1000));
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		int oper1 = Convert::ToInt32(textBoxRadio->Text);
