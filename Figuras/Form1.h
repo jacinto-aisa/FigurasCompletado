@@ -3,6 +3,7 @@
 #include "Cuadrado.h"
 #include "Triangulo.h"
 #include "Rectangulo.h"
+#include "Rombo.h"
 
 namespace CppCLRWinFormsProject {
 
@@ -69,7 +70,8 @@ namespace CppCLRWinFormsProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->listaFiguras = (gcnew System::Collections::Generic::List<Figura^>());
+			
+			this->listaFiguras = (gcnew System::Collections::Generic::List<Figura^>(1000));
 			this->textBoxRadio = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->labelSalida = (gcnew System::Windows::Forms::Label());
@@ -241,7 +243,7 @@ namespace CppCLRWinFormsProject {
 			totalSuperficie += fig->dameSuperficie();
 			totalPerimetro += fig->damePerimetro();
 		}
-
+		String^ cadena = "Total figuras: " + listaFiguras->Count;
 		this->labelSalida->Text = "Superficie: " + totalSuperficie + ", perimetro: " + totalPerimetro;
 	}
 	private: System::Void addColeccion(Figura^ figura)
@@ -269,7 +271,7 @@ namespace CppCLRWinFormsProject {
 	private: System::Void buttonRectangulo_Click(System::Object^ sender, System::EventArgs^ e) {
 		int ladoCorto = (int)this->numericUpDownLadoCorto->Value;
 		int ladoLargo = (int)this->numericUpDownLadoLargo->Value;
-		addColeccion(gcnew Rectangulo(ladoCorto, ladoLargo, 2, -100));
+		addColeccion(gcnew Rombo(ladoCorto, ladoLargo, 2, -100));
 	}
 
 };

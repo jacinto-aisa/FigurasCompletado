@@ -44,6 +44,9 @@
     <ClInclude Include="Triangulo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Rombo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -71,6 +74,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Triangulo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rombo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

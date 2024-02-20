@@ -10,9 +10,9 @@ public:
 	int damePosicionY();
 	void ponPosicionY(int numerico);
 	Figura(int posicionX, int posicionY);
-	virtual float damePerimetro() { return 0; }
-	virtual float dameSuperficie() { return 0; }
-	//virtual float damePerimetro() abstract;
-	//virtual float dameSuperficie() abstract; 
+	//virtual float damePerimetro() { return 0; }
+	//virtual float dameSuperficie() { return 0; }
+	virtual float damePerimetro() abstract;
+	virtual float dameSuperficie() abstract; 
 };
 
